@@ -1,0 +1,138 @@
+			::-webkit-scrollbar {
+				width: 0px;
+				background: transparent; /* make scrollbar transparent */
+			}
+			body {
+				margin: 0;
+			}
+			.appTitle {
+				text-align: center;
+				text-shadow: 2px 2px #ffcc99;
+				font-family: "Courier New";
+				font-size: 60px;
+				margin-top: 20px;
+			}
+			.footer {
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+			    background-color: #3b5998;
+			    color: #FFFFFF;
+			    text-align: center;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+
+				li {
+				  float: left;
+				}
+
+				li .aNav {
+				  display: block;
+				  color: black;
+				  text-align: center;
+				  padding: 14px 16px;
+				  text-decoration: none;
+				  background-color: #ffdab3;
+				  font-family: "Courier New";
+				}
+				li .aNav:hover {
+				  background-color: #ffcc99;
+				  font-weight: bold;
+				}
+
+				.loginLogoutBtn {
+				  background-color: #ffcc99;
+				}
+				.loginLogoutBtn:hover {
+				  background-color: #ffdab3;
+				}
+				.projectPostContainer {
+					background-color: #FFFFFF;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+				.subTitle {
+				text-align: center;
+				text-shadow: 2px 2px #ffcc99;
+				font-family: "Courier New";
+				font-size: 40px;
+				margin-top: 20px;
+				}
+				.projectList {
+					text-align: center;
+					padding: 5px;
+					width: 75%;
+					word-wrap: break-word;
+					color: black;
+									position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				}
+				.profileListing {
+					text-align: center;
+					padding: 5px;
+					width: 75%;
+					word-wrap: break-word;
+					color: black;
+									position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				}
+				.projectItem {
+					display: inline-block;
+					background-color: #b0bcd5;
+					margin-bottom: 5px;
+					cursor: pointer;
+					user-select: none;
+					width: 75%;
+				}
+				.projectItem:hover {
+					background-color: #b0bcd5;
+					color: black;
+				}
+				.projTitle, .projAuthor, .projDate, .projIntro, .projLikes {
+					margin-left: 4px;
+				}
+				.projTitle {
+					margin-top: -1px;
+					font-weight: bold;
+					font-size: 25px;
+				}
+				.projAuthor {
+					margin-top: -20px;
+					margin-bottom: 30px;
+				}
+				.projDate {
+					margin-top: -10px;
+				}
+				.projIntro {
+					margin-bottom: 30px;
+				}
+				.projEdit {
+					margin-top: -30px;
+					margin-bottom: 40px;
+					font-size: 12px;
+				}
+				.projLikes {
+					font-style: italic;
+					margin-top: -15px;
+				}
+				.aList {
+					text-decoration: none;
+					color: black;
+				}
+				
+				img {
+					height: 128px;
+					width: 128px;
+				}

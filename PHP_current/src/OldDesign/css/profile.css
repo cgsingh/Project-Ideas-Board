@@ -1,0 +1,151 @@
+::-webkit-scrollbar {
+				width: 0px;
+				background: transparent; /* make scrollbar transparent */
+			}
+			body {
+				background-color: beige;
+				background-image: url("Club.png");
+				background-repeat: no-repeat;
+				background-size: 100%;
+				margin: 0;
+			}
+			.appTitle {
+				text-align: center;
+				text-shadow: 2px 2px #ffcc99;
+				font-family: "Courier New";
+				font-size: 60px;
+				margin-top: 20px;
+			}
+			.footer {
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+			    background-color: beige;
+				opacity: 0.75;
+			    color: black;
+			    text-align: center;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+			
+			ul {
+				  list-style-type: none;
+				  margin-top: -20px;
+				  padding: 0;
+				  overflow: hidden;
+				  background-color: beige;
+				}
+
+				li {
+				  float: left;
+				}
+
+				li .aNav {
+				  display: block;
+				  color: black;
+				  text-align: center;
+				  padding: 14px 16px;
+				  text-decoration: none;
+				  background-color: #ffdab3;
+				  font-family: "Courier New";
+				}
+				li .aNav:hover {
+				  background-color: #ffcc99;
+				  font-weight: bold;
+				}
+
+				.loginLogoutBtn {
+				  background-color: #ffcc99;
+				}
+				.loginLogoutBtn:hover {
+				  background-color: #ffdab3;
+				}
+				.projectPostContainer {
+					border: 3px dotted black;
+					background-color: beige;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+				.subTitle {
+				text-align: center;
+				text-shadow: 2px 2px #ffcc99;
+				font-family: "Courier New";
+				font-size: 40px;
+				margin-top: 20px;
+				}
+				.profileListing {
+					text-align: center;
+					padding: 5px;
+					border: 3px dotted black;
+					width: 700px;
+					word-wrap: break-word;
+				}
+				.projectItem {
+					background-color: #ffe6cc;
+					margin-bottom: 5px;
+					cursor: pointer;
+					user-select: none;
+                    width: 700px;
+				}
+				.projectItem:hover {
+					background-color: #ffdab3;
+				}
+				.projTitle, .projAuthor, .projDate, .projIntro, .projLikes {
+					margin-left: 4px;
+				}
+				.projTitle {
+					margin-top: -1px;
+					font-weight: bold;
+					font-size: 25px;
+				}
+				.projAuthor {
+					margin-top: -20px;
+					margin-bottom: 30px;
+				}
+				.projDate {
+					margin-top: -10px;
+				}
+				.projIntro {
+					margin-bottom: 30px;
+				}
+				.projEdit {
+					margin-top: -30px;
+					margin-bottom: 40px;
+					font-size: 12px;
+				}
+				.projLikes {
+					font-style: italic;
+					margin-top: -15px;
+				}
+				.aList {
+					text-decoration: none;
+					color: black;
+				}
+				.projectPostContainer .tooltiptext {
+				  visibility: hidden;
+				  width: 120px;
+				  background-color: beige;
+				  border: 3px dotted black;
+				  color: black;
+				  text-align: center;
+				  border-radius: 6px;
+				  padding: 5px 0;
+
+				  /* Position the tooltip */
+				  position: absolute;
+                    top: 170px; 
+                    left: 200px;
+				  z-index: 1;
+				}
+
+				.projectPostContainer:hover .tooltiptext {
+				  visibility: visible;
+				}
+				
+				img {
+					height: 128px;
+					width: 128px;
+				}

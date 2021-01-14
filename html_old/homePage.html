@@ -1,0 +1,167 @@
+<html>
+	<head>
+		<style>
+			::-webkit-scrollbar {
+				width: 0px;
+				background: transparent; /* make scrollbar transparent */
+			}
+			body {
+				background-color: beige;
+				background-image: url("Club.png");
+				background-repeat: no-repeat;
+				background-size: 100%;
+				margin: 0;
+			}
+			.appTitle {
+				text-align: center;
+				text-shadow: 2px 2px #ffcc99;
+				font-family: "Courier New";
+				font-size: 60px;
+				margin-top: 20px;
+			}
+			.footer {
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+			    background-color: beige;
+				opacity: 0.75;
+			    color: black;
+			    text-align: center;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+			
+			ul {
+				  list-style-type: none;
+				  margin-top: -20px;
+				  padding: 0;
+				  overflow: hidden;
+				  background-color: beige;
+				}
+
+				li {
+				  float: left;
+				}
+
+				li .aNav {
+				  display: block;
+				  color: black;
+				  text-align: center;
+				  padding: 14px 16px;
+				  text-decoration: none;
+				  background-color: #ffdab3;
+				  font-family: "Courier New";
+				}
+				li .aNav:hover {
+				  background-color: #ffcc99;
+				  font-weight: bold;
+				}
+
+				.loginLogoutBtn {
+				  background-color: #ffcc99;
+				}
+				.loginLogoutBtn:hover {
+				  background-color: #ffdab3;
+				}
+				.projectPostContainer {
+					border: 3px dotted black;
+					background-color: beige;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+				.subTitle {
+				text-align: center;
+				text-shadow: 2px 2px #ffcc99;
+				font-family: "Courier New";
+				font-size: 40px;
+				margin-top: 20px;
+				}
+				.projectList {
+					text-align: center;
+					padding: 5px;
+					border: 3px dotted black;
+					width: 400px;
+					word-wrap: break-word;
+				}
+				.projectItem {
+					background-color: #ffe6cc;
+					margin-bottom: 5px;
+					cursor: pointer;
+					user-select: none;
+				}
+				.projectItem:hover {
+					background-color: #ffdab3;
+				}
+				.projTitle, .projAuthor, .projDate, .projIntro, .projLikes {
+					margin-left: 4px;
+				}
+				.projTitle {
+					margin-top: -1px;
+					font-weight: bold;
+					font-size: 25px;
+				}
+				.projAuthor {
+					margin-top: -20px;
+				}
+				.projDate {
+					margin-top: -10px;
+				}
+				.projIntro {
+					margin-bottom: 30px;
+				}
+				.projLikes {
+					font-style: italic;
+					margin-top: -15px;
+				}
+				.aList {
+					text-decoration: none;
+					color: black;
+				}
+		</style>
+	</head>
+	<body>
+		<h1 class="appTitle">Project Ideas Board</h1>
+		
+		<ul class="navBar">
+			<li><a class="aNav" href="homePage.html">Home</a></li>
+			<li><a class="aNav" href="registerPage.html">Register</a></li>
+			<li><a class="aNav" href="about.html">About</a></li>
+			<!-- Change the href and text based on whether or not user is logged in -->
+			<li style="float:right"><a class="aNav" class="loginLogoutBtn" href="loginPage.html">Login</a></li>
+		</ul>
+		
+		<div class="projectPostContainer">
+		<h2 class="subTitle">Projects</h2>
+		<!-- a listing similar to reddit -->
+		<ul class="projectList" id="projectList">
+		</ul>
+		<script>
+		//pull from project table in database
+		var listOfProjects = "";
+		for (var i = 0; i < 10; i++)
+		{
+			listOfProjects += "<li class=\"projectItem\">";
+			//links to the full project page relative to the project listing clicked
+			listOfProjects += "<a class=\"aList\" href=\"projectDetails.html\">";
+			listOfProjects += "<p class=\"projTitle\">Insert Title Here</p>";
+			listOfProjects += "<p class=\"projAuthor\">By: Insert Name Here</p>";
+			listOfProjects += "<p class=\"projDate\">Date: 00-00-0000</p>";
+			listOfProjects += "<p class=\"projIntro\">Insert the first 80 or so characters of the project posting. Insert the first 80 or so characters of the project posting. Insert the first 80 or so characters of the project posting. Insert the first 80 or so characters of the project posting. Insert the first 80 or so characters of the project posting. Insert the first 80 or so characters of the project posting.</p>";
+			listOfProjects += "<p class=\"projLikes\">0% of users liked this!</p>";
+			listOfProjects += "</a>";
+			listOfProjects += "</li>";
+		}
+		document.getElementById("projectList").innerHTML = listOfProjects;
+		</script>
+		</div>
+		
+		<div class="footer">
+		<span class="footerNote">BTS530 - Group 22 - Chipemba Bwacha, Matthew Rajevski, Johann Aleman, Christopher Singh</span>
+		</div>
+		<script>
+		</script>
+	</body>
+</html>

@@ -1,0 +1,189 @@
+<html>
+	<head>
+		<style>
+			::-webkit-scrollbar {
+				width: 0px;
+				background: transparent; /* make scrollbar transparent */
+			}
+			body {
+				background-color: beige;
+				background-image: url("Club.png");
+				background-repeat: no-repeat;
+				background-size: 100%;
+				margin: 0;
+			}
+			.appTitle {
+				text-align: center;
+				text-shadow: 2px 2px #ffcc99;
+				font-family: "Courier New";
+				font-size: 60px;
+				margin-top: 20px;
+			}
+			.footer {
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+			    background-color: beige;
+				opacity: 0.75;
+			    color: black;
+			    text-align: center;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+			
+			ul {
+				  list-style-type: none;
+				  margin-top: -20px;
+				  padding: 0;
+				  overflow: hidden;
+				  background-color: beige;
+				}
+
+				li {
+				  float: left;
+				}
+
+				li .aNav {
+				  display: block;
+				  color: black;
+				  text-align: center;
+				  padding: 14px 16px;
+				  text-decoration: none;
+				  background-color: #ffdab3;
+				  font-family: "Courier New";
+				}
+				li .aNav:hover {
+				  background-color: #ffcc99;
+				  font-weight: bold;
+				}
+
+				.loginLogoutBtn {
+				  background-color: #ffcc99;
+				}
+				.loginLogoutBtn:hover {
+				  background-color: #ffdab3;
+				}
+				.projectPostContainer {
+					border: 3px dotted black;
+					background-color: beige;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+				.subTitle {
+				text-align: center;
+				text-shadow: 2px 2px #ffcc99;
+				font-family: "Courier New";
+				font-size: 40px;
+				margin-top: 20px;
+				}
+				.profileListing {
+					text-align: center;
+					padding: 5px;
+					border: 3px dotted black;
+					width: 700px;
+					word-wrap: break-word;
+				}
+				.projectItem {
+					background-color: #ffe6cc;
+					margin-bottom: 5px;
+					cursor: pointer;
+					user-select: none;
+				}
+				.projectItem:hover {
+					background-color: #ffdab3;
+				}
+				.projTitle, .projAuthor, .projDate, .projIntro, .projLikes {
+					margin-left: 4px;
+				}
+				.projTitle {
+					margin-top: -1px;
+					font-weight: bold;
+					font-size: 25px;
+				}
+				.projAuthor {
+					margin-top: -20px;
+				}
+				.projDate {
+					margin-top: -10px;
+				}
+				.projIntro {
+					margin-bottom: 30px;
+				}
+				.projLikes {
+					font-style: italic;
+					margin-top: -15px;
+				}
+				.aList {
+					text-decoration: none;
+					color: black;
+				}
+				.projectPostContainer .tooltiptext {
+				  visibility: hidden;
+				  width: 120px;
+				  background-color: beige;
+				  border: 3px dotted black;
+				  color: black;
+				  text-align: center;
+				  border-radius: 6px;
+				  padding: 5px 0;
+
+				  /* Position the tooltip */
+				  position: absolute;
+				  z-index: 1;
+				}
+
+				.projectPostContainer:hover .tooltiptext {
+				  visibility: visible;
+				}
+				
+				img {
+					height: 128px;
+					width: 128px;
+				}
+		</style>
+	</head>
+	<body>
+		<h1 class="appTitle">Project Ideas Board</h1>
+		
+		<ul class="navBar">
+			<li><a class="aNav" href="homePage.html">Home</a></li>
+			<li><a class="aNav" href="registerPage.html">Register</a></li>
+			<li><a class="aNav" href="about.html">About</a></li>
+			<!-- Change the href and text based on whether or not user is logged in -->
+			<li style="float:right"><a class="aNav" class="loginLogoutBtn" href="loginPage.html">Login</a></li>
+		</ul>
+		
+		<div class="projectPostContainer">
+		<h2 class="subTitle" id="username"></h2>
+		<ul class="profileListing" id="profileListing">
+		</ul>
+		<span class="tooltiptext" id="tooltiptext">Click to modify</span>
+		<script>
+		//pull user data from database
+		var username = "John.Doe";
+		var useremail = "john.doe@gmail.com";
+		var skillTags = "C++, C, C#, Javascript, HTML";
+		var profileData = "";
+			profileData += "<a class=\"aList\" href=\"profileEdit.html\">";
+			profileData += "<li class=\"projectItem\">";
+			profileData += "<img src=\"default_avatar.png\"/>";
+			profileData += "<p class=\"projTitle\">" + username + "</p>";
+			profileData += "<p class=\"projAuthor\">" + useremail + "</p>";
+			profileData += "<p class=\"projIntro\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>";
+			profileData += "<p class=\"projLikes\">" + skillTags + "</p>";
+			profileData += "</li>";
+			profileData += "</a>";
+		document.getElementById("profileListing").innerHTML = profileData;
+		</script>
+		</div>
+		
+		<div class="footer">
+		<span class="footerNote">BTS530 - Group 22 - Chipemba Bwacha, Matthew Rajevski, Johann Aleman, Christopher Singh</span>
+		</div>
+		<script>
+		</script>
+	</body>
+</html>

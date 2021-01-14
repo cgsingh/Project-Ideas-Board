@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<style>
+			body {
+				background-color: beige;
+				background-image: url("Club.png");
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+			button {
+				background-color: #ffe6cc;
+				padding: 14px 20px;
+				outline:none;
+				border-radius: 5px;
+				border: 1px dotted #ff9933;
+			}
+			.formSubmit {
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			button:hover {
+				background-color: #ffdab3;
+			}
+			button:active {
+				background-color: #ffcc99;
+			}
+			.formInputField {
+				background-color: #ffe6cc;
+				outline: none;
+			}
+			.formInputField:hover {
+				background-color: #ffdab3;
+			}
+			.formContainer {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				min-height: 60vh;
+			}
+			.formStyle {
+				background-color: beige;
+				border: 3px dotted #ff9933;
+				border-radius: 20px;
+			}
+			.appTitle {
+				text-align: center;
+				text-shadow: 2px 2px #ffcc99;
+				font-family: "Courier New";
+				font-size: 60px;
+				margin-top: 20px;
+			}
+			.formTitle {
+				font-size: 25px;
+				margin-top: 14px;
+				margin-left: 20px;
+				margin-bottom: 5px;
+				margin-right: 386px;
+				text-decoration: underline dotted #ff9933;
+			}
+			.footer {
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+			    background-color: beige;
+				opacity: 0.75;
+			    color: black;
+			    text-align: center;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body>
+	<h1 class="appTitle">Project Ideas Board</h1>
+		<div class="formContainer">
+			<form class="formStyle">
+			<h2 class="formTitle">Edit Profile</h2>
+			<p class="formText">E-mail:</p>
+			<input type="text" class="formInputField" id="emailField"/>
+			<p class="formText">Biography:</p>
+			<textarea class="formInputField" id="bioField" rows="4" cols="50"></textarea><br/>
+			<p class="formText">Skill Tags:</p>
+			<input type="text" class="formInputField" id="skillsField"/><br/>
+			<button type="submit" onclick="modifyBio()" class="formSubmit" id="submitBtn">Submit</button>
+			</form>
+		</div>
+		<div class="footer">
+		<span class="footerNote">BTS530 - Group 22 - Chipemba Bwacha, Matthew Rajevski, Johann Aleman, Christopher Singh</span>
+		</div>
+		<script>
+		function modifyBio() {
+			//modify Bio
+		}
+		</script>
+	</body>
+</html>

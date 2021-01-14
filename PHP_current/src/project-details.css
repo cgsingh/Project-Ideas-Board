@@ -1,0 +1,198 @@
+::-webkit-scrollbar {
+				width: 0px;
+				background: transparent; /* make scrollbar transparent */
+			}
+			body {
+				background-color: beige;
+				background-image: url("Club.png");
+				background-repeat: no-repeat;
+				background-size: 100%;
+				margin: 0;
+			}
+			.appTitle {
+				text-align: center;
+				text-shadow: 2px 2px #ffcc99;
+				font-family: "Courier New";
+				font-size: 60px;
+				margin-top: 20px;
+			}
+			.footer {
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+			    background-color: beige;
+				opacity: 0.75;
+			    color: black;
+			    text-align: center;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+			
+			ul {
+				  list-style-type: none;
+				  margin-top: -20px;
+				  padding: 0;
+				  overflow: hidden;
+				  background-color: beige;
+				}
+
+				li {
+				  float: left;
+				}
+
+				li .aNav {
+				  display: block;
+				  color: black;
+				  text-align: center;
+				  padding: 14px 16px;
+				  text-decoration: none;
+				  background-color: #ffdab3;
+				  font-family: "Courier New";
+				}
+				li .aNav:hover {
+				  background-color: #ffcc99;
+				  font-weight: bold;
+				}
+
+				.loginLogoutBtn {
+				  background-color: #ffcc99;
+				}
+				.loginLogoutBtn:hover {
+				  background-color: #ffdab3;
+				}
+				.projectPostContainer {
+					border: 3px dotted black;
+					background-color: beige;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+				.commentSection {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+				
+				.commentsTitle {
+				text-align: center;
+				text-shadow: 2px 2px #ffcc99;
+				font-family: "Courier New";
+				font-size: 20px;
+				margin-top: 20px;
+				}
+				.commentLi {
+					text-align: center;
+					padding: 5px;
+					border: 3px dotted black;
+					width: 700px;
+					word-wrap: break-word;
+					margin-top: -3px;
+				}
+				.projectListing {
+					text-align: center;
+					padding: 5px;
+					border: 3px dotted black;
+					width: 700px;
+					word-wrap: break-word;
+				}
+				.fileListing {
+					float: left;
+					padding: 5px;
+					border: 3px dotted black;
+					width: 100px;
+					background-color: beige;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					/*word-wrap: break-word;*/
+				}
+				.projectItem {
+					background-color: #ffe6cc;
+					margin-bottom: 5px;
+					width: 700px;
+				}
+				.projTitle, .projAuthor, .projDate, .projIntro, .projLikes {
+					margin-left: 4px;
+				}
+				.projTitle {
+					margin-top: -1px;
+					font-weight: bold;
+					font-size: 25px;
+				}
+				.projAuthor {
+					margin-top: -20px;
+				}
+				.projDate {
+					margin-top: -10px;
+				}
+				.projIntro {
+					margin-bottom: 30px;
+				}
+				.projLikes {
+					font-style: italic;
+					margin-top: -15px;
+				}
+				.aList {
+					text-decoration: none;
+					color: black;
+				}
+				.formInputField {
+				background-color: #ffe6cc;
+				outline: none;
+				height: 50px;
+			}
+			.formInputField:hover {
+				background-color: #ffdab3;
+			}
+			#btnStyle {
+				background-color: #ffe6cc;
+				padding: 14px 20px;
+				border: 1px solid grey;
+				outline:none;
+			}
+			.formSubmit {
+				margin-top: 10px;
+			}
+			#commentSubmit {
+				margin-top: -10px;
+			}
+			#btnStyle:hover {
+				background-color: #ffdab3;
+			}
+			#btnStyle:active {
+				background-color: #ffcc99;
+			}
+			.dateC {
+				font-size: 10px;
+			}
+			.btnld {
+			  background-color: transparent;
+			  border: none;
+			  font-size: 30px;
+			  cursor: pointer;
+			  padding: 0px;
+			}
+			.commentDiv {
+				display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+
+			}
+
+			/* Darker background on mouse-over */
+			.btnld:hover {
+			  border: 1px dotted black;
+			}
+			.likeDislikeContainer {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+			}
+

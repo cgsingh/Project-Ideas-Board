@@ -1,0 +1,251 @@
+<html>
+	<head>
+		<style>
+			::-webkit-scrollbar {
+				width: 0px;
+				background: transparent; /* make scrollbar transparent */
+			}
+			body {
+				background-color: beige;
+				background-image: url("Club.png");
+				background-repeat: no-repeat;
+				background-size: 100%;
+				margin: 0;
+			}
+			.appTitle {
+				text-align: center;
+				text-shadow: 2px 2px #ffcc99;
+				font-family: "Courier New";
+				font-size: 60px;
+				margin-top: 20px;
+			}
+			.footer {
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+			    background-color: beige;
+				opacity: 0.75;
+			    color: black;
+			    text-align: center;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+			
+			ul {
+				  list-style-type: none;
+				  margin-top: -20px;
+				  padding: 0;
+				  overflow: hidden;
+				  background-color: beige;
+				}
+
+				li {
+				  float: left;
+				}
+
+				li .aNav {
+				  display: block;
+				  color: black;
+				  text-align: center;
+				  padding: 14px 16px;
+				  text-decoration: none;
+				  background-color: #ffdab3;
+				  font-family: "Courier New";
+				}
+				li .aNav:hover {
+				  background-color: #ffcc99;
+				  font-weight: bold;
+				}
+
+				.loginLogoutBtn {
+				  background-color: #ffcc99;
+				}
+				.loginLogoutBtn:hover {
+				  background-color: #ffdab3;
+				}
+				.projectPostContainer {
+					border: 3px dotted black;
+					background-color: beige;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+				.commentSection {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+				.commentsTitle {
+				text-align: center;
+				text-shadow: 2px 2px #ffcc99;
+				font-family: "Courier New";
+				font-size: 20px;
+				margin-top: 20px;
+				}
+				.commentLi {
+					text-align: center;
+					padding: 5px;
+					border: 3px dotted black;
+					width: 700px;
+					word-wrap: break-word;
+				}
+				.projectListing {
+					text-align: center;
+					padding: 5px;
+					border: 3px dotted black;
+					width: 700px;
+					word-wrap: break-word;
+				}
+				.projectItem {
+					background-color: #ffe6cc;
+					margin-bottom: 5px;
+				}
+				.projTitle, .projAuthor, .projDate, .projIntro, .projLikes {
+					margin-left: 4px;
+				}
+				.projTitle {
+					margin-top: -1px;
+					font-weight: bold;
+					font-size: 25px;
+				}
+				.projAuthor {
+					margin-top: -20px;
+				}
+				.projDate {
+					margin-top: -10px;
+				}
+				.projIntro {
+					margin-bottom: 30px;
+				}
+				.projLikes {
+					font-style: italic;
+					margin-top: -15px;
+				}
+				.aList {
+					text-decoration: none;
+					color: black;
+				}
+				.formInputField {
+				background-color: #ffe6cc;
+				outline: none;
+				height: 50px;
+			}
+			.formInputField:hover {
+				background-color: #ffdab3;
+			}
+			button {
+				background-color: #ffe6cc;
+				padding: 14px 20px;
+				border: 1px solid grey;
+				outline:none;
+			}
+			.formSubmit {
+				margin-top: 10px;
+			}
+			button:hover {
+				background-color: #ffdab3;
+			}
+			button:active {
+				background-color: #ffcc99;
+			}
+			.dateC {
+				font-size: 10px;
+			}
+			.btnld {
+			  background-color: transparent;
+			  border: none;
+			  font-size: 30px;
+			  cursor: pointer;
+			  padding: 0px;
+			}
+
+			/* Darker background on mouse-over */
+			.btnld:hover {
+			  border: 1px dotted black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="appTitle">Project Ideas Board</h1>
+		
+		<ul class="navBar">
+			<li><a class="aNav" href="homePage.html">Home</a></li>
+			<li><a class="aNav" href="registerPage.html">Register</a></li>
+			<li><a class="aNav" href="about.html">About</a></li>
+			<!-- Change the href and text based on whether or not user is logged in -->
+			<li style="float:right"><a class="aNav" class="loginLogoutBtn" href="loginPage.html">Login</a></li>
+		</ul>
+		
+		<div class="projectPostContainer">
+		<h2 class="subTitle" id="username"></h2>
+		<ul class="projectListing" id="projectListing">
+		</ul>
+		<script>
+		//pull project from database
+		var projectDetails = "";
+			projectDetails += "<li class=\"projectItem\">";
+			//links to the full project page relative to the project listing clicked
+			projectDetails += "<p class=\"projTitle\">Insert Title Here</p>";
+			projectDetails += "<p class=\"projAuthor\">By: Insert Name Here</p>";
+			projectDetails += "<p class=\"projDate\">Date: 00-00-0000</p>";
+			projectDetails += "<p class=\"projIntro\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>";
+			projectDetails += "</li>";
+		document.getElementById("projectListing").innerHTML = projectDetails;
+		</script>
+		<div class="likeDislikeContainer">
+		<button class="btnld"><i class="like"></i>&#128077;</button>
+		<button class="btnld"><i class="dislike"></i>&#128078;</button>
+		</div>
+		<br/>
+		</div>
+		<br/>
+		<div class="projectPostContainer">
+		<h2 class="commentsTitle" id="username">Group Members</h2>
+		<ul class="groupSection" id="groupList">
+		</ul>
+		<script>
+			//group member names should link to their profile pages
+			var projGroupCount = 5;
+			var groupListUL = "<br/>";
+			for (var i = 0; i < projGroupCount; i++)
+			{
+				groupListUL += "<a href=\"profilePage.php\"><li class=\"memberItem\">Ted Dingle</li></a><br/>";
+			}
+			groupListUL += "</ul>";
+			document.getElementById("groupList").innerHTML = groupListUL;
+		</script>
+		<h2 class="commentsTitle" id="username">Comments</h2>
+		<textarea class="formInputField" id="commentField" rows="4" cols="50">Enter comment here...</textarea>
+		<button type="submit" onclick="postComment()" class="formSubmit" id="submitBtn">Submit</button>
+		<br/>
+		<div class="commentSection" id="commentSection">
+		<span class="commentLi">John.Doe says: "Bla bla bla bla bla, bla bla bla."</span>
+		</div>
+		<script>
+		var comments = "";
+		var d = new Date();
+		var n = d.toString();
+		for (var i = 0; i < 10; i++)
+		{
+			comments +=
+			"<span class=\"commentLi\">" +
+			"<a href=\"profilePage.php\">John.Doe</a> says: \"Bla bla bla bla bla, bla bla bla.\"<br/>" +
+			"<span class=\"dateC\">" + n +
+			"</span>" +
+			"</span>" +
+			"<br/>";
+		}
+		document.getElementById("commentSection").innerHTML = comments;
+		</script>
+		</div>
+		
+		<div class="footer">
+		<span class="footerNote">BTS530 - Group 22 - Chipemba Bwacha, Matthew Rajevski, Johann Aleman, Christopher Singh</span>
+		</div>
+		<script>
+		</script>
+	</body>
+</html>

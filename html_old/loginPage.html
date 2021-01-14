@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<style>
+			body {
+				background-color: beige;
+				background-image: url("Club.png");
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+			button {
+				background-color: #ffe6cc;
+				padding: 14px 20px;
+				border: 1px solid grey;
+				outline:none;
+			}
+			.formSubmit {
+				margin-top: 10px;
+			}
+			button:hover {
+				background-color: #ffdab3;
+			}
+			button:active {
+				background-color: #ffcc99;
+			}
+			.formInputField {
+				background-color: #ffe6cc;
+				outline: none;
+			}
+			.formInputField:hover {
+				background-color: #ffdab3;
+			}
+			.formContainer {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				min-height: 60vh;
+			}
+			.formStyle {
+				background-color: beige;
+				width: 300px;
+				height: 260px;
+				border: 3px dotted #ff9933;
+				border-radius: 20px;
+			}
+			.appTitle {
+				text-align: center;
+				text-shadow: 2px 2px #ffcc99;
+				font-family: "Courier New";
+				font-size: 60px;
+				margin-top: 20px;
+			}
+			.formTitle {
+				font-size: 25px;
+				margin-top: 14px;
+				margin-bottom: 5px;
+				margin-right: 106px;
+				text-decoration: underline dotted #ff9933;
+			}
+			.footer {
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+			    background-color: beige;
+				opacity: 0.75;
+			    color: black;
+			    text-align: center;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body>
+	<h1 class="appTitle">Project Ideas Board</h1>
+		<div class="formContainer">
+			<form class="formStyle">
+			<h2 class="formTitle">Login</h2>
+			<p class="formText">Username:</p>
+			<input type="text" class="formInputField" id="usernameField"/>
+			<p class="formText">Password:</p>
+			<input type="password" class="formInputField" id="passwordField"/><br/>
+			<button type="submit" onclick="myFunction()" class="formSubmit" id="submitBtn">Login</button>
+			</form>
+		</div>
+		<div class="footer">
+		<span class="footerNote">BTS530 - Group 22 - Chipemba Bwacha, Matthew Rajevski, Johann Aleman, Christopher Singh</span>
+		</div>
+		<script>
+		var username = "";
+		var password = "";
+		function myFunction() {
+			username = document.getElementById("usernameField").value;
+			password = document.getElementById("passwordField").value;
+			if (!(username == "" || password == ""))
+			{
+				alert("Welcome back, " + username + "!");
+			}
+			else
+			{
+				alert("Invalid username or password.");
+			}
+		}
+		</script>
+	</body>
+</html>
